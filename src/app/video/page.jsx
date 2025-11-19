@@ -87,7 +87,28 @@ export default function VideoPage() {
                 allowFullScreen
               />
             </div> */}
-            <iframe src="https://player.vimeo.com/video/1138446615?context=Vimeo%5CController%5CApi%5CResources%5CVideoController.&h=0382faf1cb&s=579b77ffce136a4ae6507e03cd5d9c4a2da508de_1763650327" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  <div
+  style={{
+    padding: "56.25% 0 0 0",
+    position: "relative",
+  }}
+>
+  <iframe
+    src="https://player.vimeo.com/video/1138446615?h=0382faf1cb&badge=0&autopause=0&player_id=0&app_id=58479"
+    frameBorder="0"
+    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+    referrerPolicy="strict-origin-when-cross-origin"
+    style={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+    }}
+    title="AVIGNON"
+  ></iframe>
+</div>
+
           </div>
         )}
       </div>

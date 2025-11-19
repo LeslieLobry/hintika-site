@@ -532,3 +532,10 @@ body {
     margin-top: 4rem;
   }
 }
+ /*video */
+ .vp-target content-area-sibling-enabled hidden{
+  display: none;
+ }
+ .vp-target {
+  display: none;
+ }
