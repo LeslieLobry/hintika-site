@@ -75,7 +75,7 @@ export default function VideoPage() {
 
         {authorized && (
           <div className="video-wrapper">
-            <h2>Teaser / captation</h2>
+            <h2> Captation</h2>
 
             {/* 🎥 Player Vimeo */}
             <div className="video-iframe-wrapper">

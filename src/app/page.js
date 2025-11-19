@@ -74,14 +74,13 @@ export default function Home() {
               <article className="card">
                 <h3>L&apos;Amour Après</h3>
                 <p className="card-meta">
-                  Création 2025 · Avec Ann-Gisel Glass · Mise en scène Didier
+                  En création · Avec Ann-Gisel Glass · Mise en scène Didier
                   Bernard
                 </p>
                 <p>
                   Premier projet produit par Hintika : une adaptation sensible
                   et profondément incarnée du livre de Marceline
-                  Loridan-Ivens et Judith Perrignon, autour des amours de
-                  Marceline après la déportation.
+                  Loridan-Ivens et Judith Perrignon.
                 </p>
                 <a href="#amour-apres" className="card-link">
                   Découvrir le projet →
@@ -117,11 +116,11 @@ export default function Home() {
         <section id="amour-apres" className="section">
           <div className="container">
             <h2>
-              <span>L&apos;Amour</span> Après — un projet Hintika
+              <span>L&apos;Amour</span> Après, un projet Hintika
             </h2>
             <p className="intro">
               Adaptation du livre de Marceline Loridan-Ivens et Judith
-              Perrignon. Une traversée des amours de Marceline après la
+              Perrignon. Une traversée de la vie de Marceline après la
               déportation, où se rejoue la conquête de la liberté et la
               réconciliation entre la femme et la survivante.
             </p>
@@ -163,8 +162,7 @@ export default function Home() {
               Après une première collaboration autour de <em>La Princesse
               blanche</em> de Rilke, Ann-Gisel Glass et Didier Bernard cherchaient
               un nouveau projet commun. Ils le trouvent dans ce texte, qui
-              devient le point de départ d&apos;une lecture-spectacle portée par
-              une actrice et accompagnée par une mise en scène sobre et
+              devient le point de départ d&apos;une pièce pour une actrice dans une mise en scène sobre et
               attentive à la parole.
             </p>
           </div>
@@ -230,7 +228,7 @@ export default function Home() {
                 </p>
               </article>
 
-              <article className="card">
+              {/* <article className="card">
                 <h3>Mise en Lumière</h3>
                 <p className="card-meta">Production &amp; accompagnement</p>
                 <p>
@@ -240,7 +238,7 @@ export default function Home() {
                   Barcelone et partenaire du Prix de la Citoyenneté au Festival
                   de Cannes.
                 </p>
-              </article>
+              </article> */}
             </div>
           </div>
         </section>
@@ -347,12 +345,12 @@ export default function Home() {
                 Production / diffusion :
                 <br />
                 <strong>Nom de la personne à contacter</strong>
-                <br />
+                {/* <br />
                 Tél. : 00 00 00 00 00
-                <br />
-                <a href="mailto:contact@hintika.fr">contact@hintika.fr</a>
+                <br /> */}
+                <a href="mailto:admint@hintika.fr">contact@hintika.fr</a>
               </p>
-              <p>
+              {/* <p>
                 Pour L&apos;Amour Après :
                 <br />
                 <strong>Mise en Lumière</strong>
@@ -360,7 +358,7 @@ export default function Home() {
                 <a href="mailto:francoisvila@gmail.com">
                   francoisvila@gmail.com
                 </a>
-              </p>
+              </p> */}
             </div>
           </div>
         </section>
