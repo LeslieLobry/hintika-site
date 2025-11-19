@@ -76,23 +76,17 @@ export default function VideoPage() {
         {authorized && (
           <div className="video-wrapper">
             <h2>Teaser / captation</h2>
-            {/* Option 1 : vidéo hébergée sur le site */}
-            <video
-              className="video-player"
-              controls
-              preload="metadata"
-              src="/videos/hintika-teaser.mp4"
-            />
 
-            {/* Option 2 : si tu préfères un lecteur externe (Vimeo/YouTube) */}
-            {/* <div className="video-iframe-wrapper">
+            {/* 🎥 Player Vimeo */}
+            <div className="video-iframe-wrapper">
               <iframe
-                src="https://player.vimeo.com/video/XXXXX"
+                src="https://player.vimeo.com/video/123456789?title=0&byline=0&portrait=0"
                 title="Teaser Hintika"
+                className="video-iframe"
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowFullScreen
               />
-            </div> */}
+            </div>
           </div>
         )}
       </div>
