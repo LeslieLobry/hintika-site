@@ -76,9 +76,9 @@ export default function VideoPage() {
         {authorized && (
           <div className="video-wrapper">
             <h2> Captation</h2>
-
+{/* 
             {/* 🎥 Player Vimeo */}
-            <div className="video-iframe-wrapper">
+            {/* <div className="video-iframe-wrapper">
               <iframe
                 src="https://vimeo.com/1138446615?fl=ip&fe=ec"
                 title="Teaser Hintika"
@@ -86,7 +86,8 @@ export default function VideoPage() {
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowFullScreen
               />
-            </div>
+            </div> */}
+            <iframe src="https://player.vimeo.com/video/1138446615?context=Vimeo%5CController%5CApi%5CResources%5CVideoController.&h=0382faf1cb&s=579b77ffce136a4ae6507e03cd5d9c4a2da508de_1763650327" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
           </div>
         )}
       </div>
