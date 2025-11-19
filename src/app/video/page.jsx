@@ -80,7 +80,7 @@ export default function VideoPage() {
             {/* 🎥 Player Vimeo */}
             <div className="video-iframe-wrapper">
               <iframe
-                src="https://player.vimeo.com/video/123456789?title=0&byline=0&portrait=0"
+                src="https://vimeo.com/1138446615?fl=ip&fe=ec"
                 title="Teaser Hintika"
                 className="video-iframe"
                 allow="autoplay; fullscreen; picture-in-picture"
