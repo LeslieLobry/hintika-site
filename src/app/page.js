@@ -1,4 +1,8 @@
 // app/page.js
+
+import PhotoCarousel from "../../components/PhotoCarousel";
+
+
 export default function Home() {
   return (
     <>
@@ -118,6 +122,15 @@ export default function Home() {
             <h2>
               <span>L&apos;Amour</span> Après, un projet Hintika
             </h2>
+             {/* GALERIE PHOTOS */}
+        <section id="galerie" className="section">
+          <div className="container">
+            <h2>
+              <span>Galerie</span> photos
+            </h2>
+            <PhotoCarousel />
+          </div>
+        </section>
             <p className="intro">
               Adaptation du livre de Marceline Loridan-Ivens et Judith
               Perrignon. Une traversée de la vie de Marceline après la
@@ -348,7 +361,7 @@ export default function Home() {
                 {/* <br />
                 Tél. : 00 00 00 00 00
                 <br /> */}
-                <a href="mailto:admint@hintika.fr">contact@hintika.fr</a>
+                <a href="mailto:admint@hintika.fr">admin@hintika.fr</a>
               </p>
               {/* <p>
                 Pour L&apos;Amour Après :
