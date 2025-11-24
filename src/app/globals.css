@@ -157,6 +157,7 @@ body {
   margin-bottom: 2rem;
   max-width: 640px;
 }
+
 .logo {
   font-size: clamp(2.8rem, 4vw, 3.6rem);
   margin-bottom: 0.5rem;
@@ -256,6 +257,7 @@ body {
   color: #d0d0d0;
   max-width: 720px;
 }
+
 .video-wrapper {
   margin-top: 2rem;
 }
@@ -532,15 +534,16 @@ body {
     margin-top: 4rem;
   }
 }
- /*video */
- .vp-target content-area-sibling-enabled hidden{
-  display: none;
- }
- .vp-target {
-  display: none;
- }
 
- /* ===================== CAROUSEL ===================== */
+/* video */
+.vp-target content-area-sibling-enabled hidden{
+  display: none;
+}
+.vp-target {
+  display: none;
+}
+
+/* ===================== CAROUSEL ===================== */
 
 .carousel {
   position: relative;
@@ -548,7 +551,7 @@ body {
   border-radius: 1.5rem;
   max-width: 980px;
   margin: 2rem auto 0;
-  background: radial-gradient(circle at top left, #1f2933, #050814);
+  background: radial-gradient(circle at top left, #2b0a11, #050509);
   box-shadow:
     0 18px 45px rgba(0, 0, 0, 0.55),
     0 0 0 1px rgba(255, 255, 255, 0.04);
@@ -609,9 +612,9 @@ body {
   display: inline-block;
   padding: 0.6rem 0.9rem;
   border-radius: 999px;
-  background: rgba(15, 23, 42, 0.82);
+  background: linear-gradient(180deg, #ff4b5c, #c00026);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(224, 192, 132, 0.35); /* doré léger */
+  border: 1px solid rgba(255, 255, 255, 0.35); /* blanc/gris, plus de doré */
 }
 
 /* Flèches */
@@ -623,8 +626,12 @@ body {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 999px;
-  border: 1px solid rgba(248, 250, 252, 0.4);
-  background: radial-gradient(circle at top, rgba(15, 23, 42, 0.9), #020617);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: radial-gradient(
+    circle at top,
+    rgba(43, 10, 17, 0.9),
+    #050509
+  );
   color: #f9fafb;
   cursor: pointer;
   display: flex;
@@ -649,9 +656,9 @@ body {
 }
 
 .carousel-arrow:hover {
-  background: radial-gradient(circle at top, #e0c084, #a37b3b);
-  border-color: rgba(15, 23, 42, 0.9);
-  color: #020617;
+  background: radial-gradient(circle at top, #ff4b5c, #c00026);
+  border-color: #ff4b5c;
+  color: #ffffff;
   transform: translateY(-50%) scale(1.05);
   box-shadow: 0 18px 35px rgba(0, 0, 0, 0.7);
 }
@@ -671,8 +678,8 @@ body {
   width: 9px;
   height: 9px;
   border-radius: 999px;
-  border: 1px solid rgba(226, 232, 240, 0.7);
-  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: rgba(5, 5, 9, 0.85);
   cursor: pointer;
   padding: 0;
   transition:
@@ -684,8 +691,8 @@ body {
 
 .carousel-dot-active {
   width: 22px;
-  background: linear-gradient(90deg, #e0c084, #f3e4c2);
-  border-color: rgba(15, 23, 42, 0.95);
+  background: linear-gradient(90deg, #ff4b5c, #ffffff);
+  border-color: #ff4b5c;
   transform: translateY(-1px);
 }
 
