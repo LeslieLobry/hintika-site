@@ -5,19 +5,24 @@ import { useEffect, useState, useCallback } from "react";
 const slides = [
   {
     src: "/1.JPG",
-    alt: "L'Amour Après - répétitions sur le plateau",
-    legend: "L’Amour Après — répétitions en lumière douce",
+    alt: "L'Amour Après - Lecture au festival d'avignon",
+    legend: "L’Amour Après — Lecture au festival d'avignon",
   },
   {
     src: "/2.JPG",
     alt: "Ann-Gisel Glass sur scène",
-    legend: "Ann-Gisel Glass — présence et parole au plateau",
+    legend: "Lecture au festival d'avignon ",
   },
   {
     src: "/3.JPG",
     alt: "Travail de table autour du texte",
-    legend: "Autour du texte — travail de table et de dramaturgie",
+    legend: "Lecture au festival d'avignon",
   },
+  {
+    src: "/4.JPG",
+    alt: "Travail de table autour du texte",
+    legend: "Lecture au festival d'avignon",
+  }
 ];
 
 export default function PhotoCarousel() {
