@@ -1,0 +1,94 @@
+/* components/PhotoCarousel/PhotoCarousel.css */
+
+.photo-carousel {
+  width: 100%;
+  max-width: 640px; /* optionnel, pour éviter que ça parte trop large */
+  margin: 0 auto;
+}
+
+.photo-carousel-main {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* ✅ Cadre fixe, ratio 16/9 */
+.photo-carousel-frame {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  aspect-ratio: 16 / 9;   /* hauteur fixe quel que soit le format source */
+  background: #000;       /* fond noir pendant le chargement / si image lente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ✅ Image entière dans le cadre + animation douce */
+.photo-carousel-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;    /* on ne coupe plus l’image */
+  animation: photoFade 400ms ease-in-out;
+}
+
+@keyframes photoFade {
+  from {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Légende sous l’image */
+.photo-carousel-legend {
+  margin: 0.4rem 0 0;
+  font-size: 0.85rem;
+}
+
+/* Flèches */
+.photo-carousel-arrow {
+  border: none;
+  background: rgba(0, 0, 0, 0.5);  /* discret, fonctionne bien avec ton fond noir/rouge */
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0.35rem 0.55rem;
+  border-radius: 999px;
+  transition: background 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+}
+
+.photo-carousel-arrow:hover {
+  background: rgba(0, 0, 0, 0.75);
+  transform: translateY(-1px);
+}
+
+/* Points */
+.photo-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+}
+
+.photo-carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: width 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+}
+
+.photo-carousel-dot-active {
+  width: 18px;
+  background: #ffffff; /* tu peux passer ça en rouge si tu veux coller au thème */
+}

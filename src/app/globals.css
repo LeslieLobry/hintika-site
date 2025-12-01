@@ -31,6 +31,36 @@ body {
   align-items: stretch;
 }
 
+/* bloc texte + image dans le hero */
+.hero-text {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 3rem;
+  padding: 3rem 0;
+}
+
+/* image à gauche */
+.hero-photo {
+  max-width: 340px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+}
+
+.hero-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* texte à droite */
+.hero-copy {
+  max-width: 560px;
+}
+
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -153,11 +183,6 @@ body {
 
 /* Hero text */
 
-.hero-text {
-  margin-bottom: 2rem;
-  max-width: 640px;
-}
-
 .logo {
   font-size: clamp(2.8rem, 4vw, 3.6rem);
   margin-bottom: 0.5rem;
@@ -224,7 +249,7 @@ body {
 /* Sections */
 
 .section {
-  padding: 4rem 1.5rem;
+  padding: 2rem 1.5rem;
 }
 
 .section-alt {
@@ -296,6 +321,9 @@ body {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   border-radius: 1rem;
   background: rgba(8, 8, 12, 0.96);
   border: 1px solid rgba(255, 255, 255, 0.06);
@@ -307,6 +335,7 @@ body {
   margin-top: 0;
   margin-bottom: 0.25rem;
   font-size: 1.1rem;
+  color: #c00026;
 }
 
 .card-meta {
@@ -516,7 +545,7 @@ body {
   border-radius: 1rem;
 }
 
-/* Responsive nav */
+/* Responsive nav + hero */
 
 @media (max-width: 720px) {
   .navbar {
@@ -531,7 +560,14 @@ body {
   }
 
   .hero-text {
-    margin-top: 4rem;
+    margin-top: 2.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .hero-photo {
+    max-width: 260px;
   }
 }
 
@@ -543,7 +579,7 @@ body {
   display: none;
 }
 
-/* ===================== CAROUSEL ===================== */
+/* ===================== CAROUSEL (grand hero) ===================== */
 
 .carousel {
   position: relative;
@@ -614,7 +650,7 @@ body {
   border-radius: 999px;
   background: linear-gradient(180deg, #ff4b5c, #c00026);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.35); /* blanc/gris, plus de doré */
+  border: 1px solid rgba(255, 255, 255, 0.35); /* blanc/gris */
 }
 
 /* Flèches */
@@ -696,7 +732,7 @@ body {
   transform: translateY(-1px);
 }
 
-/* Mobile */
+/* Mobile pour le grand carousel */
 @media (max-width: 768px) {
   .carousel {
     border-radius: 1.1rem;
