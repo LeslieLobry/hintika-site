@@ -440,7 +440,7 @@ export default function Home() {
                 <br />
                 <strong>Mail de contact</strong>
                 <br />
-                <a href="mailto:admint@hintika.fr">admin@hintika.fr</a>
+                <a href="mailto:admin@hintika.fr">admin@hintika.fr</a>
               </p>
             </div>
           </div>
