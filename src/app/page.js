@@ -446,16 +446,59 @@ export default function Home() {
           </div>
         </section>
       </main>
+<footer className="footer">
+  <div className="container footer-inner">
+    <p>
+      © {new Date().getFullYear()} Hintika Production — Tous droits réservés.
+    </p>
 
-      <footer className="footer">
-        <div className="container footer-inner">
-          <p>
-            © {new Date().getFullYear()} Hintika Production — Tous droits
-            réservés.
-          </p>
-          <a href="#top">Retour en haut ↑</a>
-        </div>
-      </footer>
+    <div className="footer-links">
+      <a href="#top">Retour en haut ↑</a>
+
+      <span className="footer-sep">·</span>
+
+      <a
+        href="http://tiktok.com/@ann.gisle.glass"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        TikTok
+      </a>
+
+      <span className="footer-sep">·</span>
+
+      <a
+        href="https://www.instagram.com/lamourapres_theatre?igsh=MXdsM3dtaTZzeHc0ag=="
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Instagram
+      </a>
+
+      <span className="footer-sep">·</span>
+
+      <a
+        href="https://www.facebook.com/anngisel.glass?locale=fr_FR"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Facebook
+      </a>
+
+      <span className="footer-sep">·</span>
+
+      <a
+        href="https://fr.ulule.com/ecoutez-marceline/?utm_campaign=presale_222967&utm_source=shared-from-Ulule-success-modal-on---http.referer--&utm_medium=uluid_161017"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Ulule
+      </a>
+    </div>
+  </div>
+</footer>
+
+  
     </>
   );
 }
