@@ -7,23 +7,18 @@ const galerieSlides = [
   {
     src: "/1.JPG",
     alt: "Répétitions sur le plateau",
-    // legend: "Lecture à Avignon",
   },
   {
     src: "/2.JPG",
     alt: "Travail de table autour du texte",
-    // legend: "Lecture à Avignon",
   },
   {
     src: "/3.JPG",
     alt: "Essais lumière et espace",
-    // legend: "Lecture à Avignon",
-
   },
-   {
+  {
     src: "/4.JPG",
     alt: "Essais lumière et espace",
-    // legend: "Lecture à Avignon",
   },
 ];
 
@@ -32,12 +27,10 @@ const annGiselSlides = [
   {
     src: "/ann-gisel-1.jpg",
     alt: "Ann-Gisel Glass en répétition",
-    // legend: "Ann-Gisel Glass — travail sur le texte",
   },
   {
     src: "/ann-gisel-2.jpg",
     alt: "Ann-Gisel Glass sur scène",
-    // legend: "Présence au plateau — l’intime et le politique",
   },
 ];
 
@@ -46,34 +39,24 @@ const didierSlides = [
   {
     src: "/didier-1.jpg",
     alt: "Didier Bernard en répétition",
-    // legend: "Direction d’actrice et travail de plateau",
   },
   {
     src: "/didier-2.jpg",
     alt: "Didier Bernard en discussion",
-    // legend: "Échanges autour de la mise en scène",
-  },{
+  },
+  {
     src: "/didier-3.png",
     alt: "Didier Bernard en discussion",
-    // legend: "Échanges autour de la mise en scène",
   },
 ];
+
 const marcelineSlides = [
   {
     src: "/Marceline.jpeg",
-    alt: "Didier Bernard en répétition",
-    // legend: "Direction d’actrice et travail de plateau",
-  // },
-  // {
-  //   src: "/didier-2.jpg",
-  //   alt: "Didier Bernard en discussion",
-  //   // legend: "Échanges autour de la mise en scène",
-  // },{
-  //   src: "/didier-3.png",
-  //   alt: "Didier Bernard en discussion",
-  //   // legend: "Échanges autour de la mise en scène",
-   },
+    alt: "Marceline Loridan-Ivens",
+  },
 ];
+
 export default function Home() {
   return (
     <>
@@ -89,42 +72,37 @@ export default function Home() {
               <a href="#projets">Productions</a>
               <a href="#amour-apres">L&apos;Amour Après</a>
               <a href="#amour-apres-equipe">L&apos;équipe</a>
-              {/* 🔗 lien direct vers la page vidéo */}
               <a href="/video">Vidéo</a>
               <a href="#contact">Contact</a>
             </div>
           </nav>
 
-<div className="hero-text">
-  {/* 📸 Bloc image à gauche */}
-  <div className="hero-photo">
-    <img
-      src="/HINTIKA.PNG" // ou /1.JPG, /4.JPG… adapte au bon fichier de /public
-      alt="Affiche du spectacle L'Amour Après"
-    />
-  </div>
+          <div className="hero-text">
+            <div className="hero-photo">
+              <img
+                src="/HINTIKA.PNG"
+                alt="Affiche du spectacle L'Amour Après"
+              />
+            </div>
 
-  {/* ✏️ Texte à droite */}
-  <div className="hero-copy">
-    <h1 className="logo">Hintika Production</h1>
+            <div className="hero-copy">
+              <h1 className="logo">Hintika Production</h1>
 
-    <p className="tagline">
-      Une maison de création qui accompagne, éclaire et produit des
-      projets engagés, sensibles et profondément humains.
-    </p>
+              <p className="tagline">
+                Une maison de création qui accompagne, éclaire et produit des
+                projets engagés, sensibles et profondément humains.
+              </p>
 
-    <div className="hero-buttons">
-      <a href="#projets" className="btn">
-        Découvrir nos productions
-      </a>
-      <a href="#contact" className="btn btn-outline">
-        Contacter Hintika
-      </a>
-    </div>
-  </div>
-</div>
-
-
+              <div className="hero-buttons">
+                <a href="#projets" className="btn">
+                  Découvrir nos productions
+                </a>
+                <a href="#contact" className="btn btn-outline">
+                  Contacter Hintika
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </header>
 
@@ -144,8 +122,7 @@ export default function Home() {
               scène, des interprètes et des auteurs dans des créations qui
               interrogent notre époque, mêlant théâtre, écriture, image et
               matière documentaire. Nous défendons une approche humaine,
-              attentive aux processus de travail autant qu&apos;aux formes
-              finales.
+              attentive aux processus de travail autant qu&apos;aux formes finales.
             </p>
           </div>
         </section>
@@ -158,7 +135,6 @@ export default function Home() {
             </h2>
 
             <div className="grid">
-              {/* PROJET 1 : L'AMOUR APRÈS */}
               <article className="card">
                 <h3>L&apos;Amour Après</h3>
                 <p className="card-meta">
@@ -167,15 +143,13 @@ export default function Home() {
                 </p>
                 <p>
                   Premier projet produit par Hintika : une adaptation sensible
-                  et profondément incarnée du livre de Marceline
-                  Loridan-Ivens et Judith Perrignon.
+                  et profondément incarnée du livre de Marceline Loridan-Ivens et
+                  Judith Perrignon.
                 </p>
                 <a href="#amour-apres" className="card-link">
-                  Découvrir le projet →{" "}
+                  Découvrir le projet →
                 </a>
               </article>
-
-              {/* Emplacements projets futurs commentés */}
             </div>
           </div>
         </section>
@@ -187,13 +161,11 @@ export default function Home() {
               <span>L&apos;Amour</span> Après, un projet Hintika
             </h2>
 
-            {/* GALERIE PHOTOS */}
             <section id="galerie" className="section">
               <div className="container">
                 <h2>
                   <span>Galerie</span> photos
                 </h2>
-                {/* ✅ On passe les slides à PhotoCarousel */}
                 <PhotoCarousel slides={galerieSlides} />
               </div>
             </section>
@@ -213,7 +185,6 @@ export default function Home() {
               collective et désir de vivre.
             </p>
 
-            {/* 🔗 bouton vers la page vidéo */}
             <a href="/video" className="btn btn-video">
               Voir la vidéo du spectacle
             </a>
@@ -239,11 +210,11 @@ export default function Home() {
               l&apos;amour, l&apos;humour et la liberté.
             </p>
             <p>
-              Après une première collaboration autour de <em>La Princesse
-              blanche</em> de Rilke, Ann-Gisel Glass et Didier Bernard cherchaient
-              un nouveau projet commun. Ils le trouvent dans ce texte, qui
-              devient le point de départ d&apos;une pièce pour une actrice dans une mise en scène sobre et
-              attentive à la parole.
+              Après une première collaboration autour de <em>La Princesse blanche</em>{" "}
+              de Rilke, Ann-Gisel Glass et Didier Bernard cherchaient un nouveau
+              projet commun. Ils le trouvent dans ce texte, qui devient le point
+              de départ d&apos;une pièce pour une actrice dans une mise en scène
+              sobre et attentive à la parole.
             </p>
           </div>
         </section>
@@ -268,12 +239,12 @@ export default function Home() {
             </p>
             <p>
               La mise en scène propose un espace épuré où la voix d&apos;Ann-Gisel
-              Glass répond à des présences filmées&nbsp;: visages, hommes, fragments
-              de souvenirs, comme autant de partenaires imaginaires avec
-              lesquels Marceline poursuit sa conversation. Le théâtre devient un
-              lieu de partage direct avec le public, où la question du bonheur
-              revient, simple, presque naïve, mais essentielle&nbsp;: « Êtes-vous en
-              vie&nbsp;? Êtes-vous heureux&nbsp;? ».
+              Glass répond à des présences filmées&nbsp;: visages, hommes,
+              fragments de souvenirs, comme autant de partenaires imaginaires
+              avec lesquels Marceline poursuit sa conversation. Le théâtre
+              devient un lieu de partage direct avec le public, où la question
+              du bonheur revient, simple, presque naïve, mais essentielle&nbsp;:
+              « Êtes-vous en vie&nbsp;? Êtes-vous heureux&nbsp;? ».
             </p>
           </div>
         </section>
@@ -285,33 +256,31 @@ export default function Home() {
               <span>Équipe</span> artistique
             </h2>
             <div className="grid">
-             <article className="card">
-  {/* ✅ Carousel Ann-Gisel */}
-  <PhotoCarousel slides={annGiselSlides} className="card-carousel" />
+              <article className="card">
+                <PhotoCarousel slides={annGiselSlides} className="card-carousel" />
 
-  <h3>Ann-Gisel Glass</h3>
-  <p className="card-meta">Interprétation</p>
-  <p>
-    D&apos;abord remarquée au cinéma, elle tourne notamment avec
-    Jean-Luc Godard, Costa-Gavras, Jacques Doillon, Olivier
-    Assayas, Tony Gatlif ou Gérard Jugnot. Elle se consacre ensuite
-    au théâtre et à la production de courts métrages, en développant
-    un travail où l&apos;intime et le politique se rejoignent.
-  </p>
+                <h3>Ann-Gisel Glass</h3>
+                <p className="card-meta">Interprétation</p>
+                <p>
+                  D&apos;abord remarquée au cinéma, elle tourne notamment avec
+                  Jean-Luc Godard, Costa-Gavras, Jacques Doillon, Olivier
+                  Assayas, Tony Gatlif ou Gérard Jugnot. Elle se consacre ensuite
+                  au théâtre et à la production de courts métrages, en
+                  développant un travail où l&apos;intime et le politique se
+                  rejoignent.
+                </p>
 
-  <a
-    href="/CV-AnnGiselGlass-2025-1.pdf"   
-    className="card-link"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Ouvrir le cv →
-  </a>
-</article>
-
+                <a
+                  href="/CV-AnnGiselGlass-2025-1.pdf"
+                  className="card-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Ouvrir le cv →
+                </a>
+              </article>
 
               <article className="card">
-                {/* ✅ Carousel Didier */}
                 <PhotoCarousel slides={didierSlides} className="card-carousel" />
 
                 <h3>Didier Bernard</h3>
@@ -323,13 +292,13 @@ export default function Home() {
                   sobres, où la relation aux spectateurs est centrale et directe.
                 </p>
                 <a
-    href="/didiercv.pdf"   
-    className="card-link"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Ouvrir le cv →
-  </a>
+                  href="/didiercv.pdf"
+                  className="card-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Ouvrir le cv →
+                </a>
               </article>
             </div>
           </div>
@@ -343,7 +312,10 @@ export default function Home() {
             </h2>
             <div className="grid">
               <article className="card">
-                <PhotoCarousel slides={marcelineSlides} className="card-carousel" />
+                <PhotoCarousel
+                  slides={marcelineSlides}
+                  className="card-carousel"
+                />
 
                 <h3>Marceline Loridan-Ivens</h3>
                 <p className="card-meta">Scénariste, réalisatrice, écrivaine</p>
@@ -351,8 +323,8 @@ export default function Home() {
                   Rescapée de la Shoah, elle consacre une grande partie de son
                   œuvre à la mémoire de la déportation et à la transmission&nbsp;:
                   films documentaires réalisés avec Joris Ivens, écrits
-                  autobiographiques et récits où l&apos;intime rencontre l&apos;histoire
-                  collective.
+                  autobiographiques et récits où l&apos;intime rencontre
+                  l&apos;histoire collective.
                 </p>
               </article>
 
@@ -360,62 +332,16 @@ export default function Home() {
                 <h3>Judith Perrignon</h3>
                 <p className="card-meta">Autrice &amp; journaliste</p>
                 <p>
-                  Journaliste à <em>Libération</em> puis autrice de nombreux livres,
-                  elle signe des récits, enquêtes et romans où se mêlent portraits
-                  et grandes questions politiques. Elle co-écrit notamment{" "}
-                  <em>Et tu n&apos;es pas revenu</em> et <em>L&apos;Amour après</em> avec
-                  Marceline Loridan-Ivens.
+                  Journaliste à <em>Libération</em> puis autrice de nombreux
+                  livres, elle signe des récits, enquêtes et romans où se mêlent
+                  portraits et grandes questions politiques. Elle co-écrit
+                  notamment <em>Et tu n&apos;es pas revenu</em> et{" "}
+                  <em>L&apos;Amour après</em> avec Marceline Loridan-Ivens.
                 </p>
               </article>
-
-              {/* <article className="card">
-                <h3>Autour du livre</h3>
-                <p className="card-meta">Œuvres et transmissions</p>
-                <p>
-                  Le spectacle s&apos;inscrit dans la continuité d&apos;un parcours marqué
-                  par le cinéma, la littérature et un engagement constant pour la
-                  mémoire, la liberté et la dignité. Il propose une nouvelle forme
-                  de rencontre avec la parole de Marceline, adressée ici
-                  directement aux spectateurs.
-                </p>
-              </article> */}
             </div>
           </div>
         </section>
-
-        {/* PRESSE / DOSSIER */}
-        {/* <section id="presse" className="section section-alt">
-          <div className="container">
-            <h2>
-              <span>Dossier</span> &amp; presse
-            </h2>
-            <p className="intro">
-              Espace à destination des programmateurs, structures culturelles et
-              journalistes.
-            </p>
-            <ul className="presse-list">
-              <li>
-                <span>Dossier complet du spectacle L&apos;Amour Après</span>
-                
-                <a href="#" className="presse-link">
-                  Télécharger le PDF
-                </a>
-              </li>
-              <li>
-                <span>Photos de répétitions / lectures</span>
-                <a href="#" className="presse-link">
-                  Demander un lien de téléchargement
-                </a>
-              </li>
-              <li>
-                <span>Teaser vidéo (à venir)</span>
-                <a href="#" className="presse-link">
-                  Bientôt disponible
-                </a>
-              </li>
-            </ul>
-          </div>
-        </section> */}
 
         {/* CONTACT / PRODUCTION */}
         <section id="contact" className="section">
@@ -424,10 +350,11 @@ export default function Home() {
               <span>Production</span> &amp; contact
             </h2>
             <p className="intro">
-              Pour toute demande de programmation, d&apos;informations techniques ou
-              de presse, vous pouvez contacter Hintika et la production du
-              spectacle.
+              Pour toute demande de programmation, d&apos;informations techniques,
+              de presse ou de réservation, vous pouvez contacter Hintika et la
+              production du spectacle.
             </p>
+
             <div className="contact-block">
               <p>
                 <strong>Hintika Production</strong>
@@ -435,70 +362,88 @@ export default function Home() {
                 Structure de production et d&apos;accompagnement de projets
                 artistiques.
               </p>
+
               <p>
-                Production / diffusion :
-                <br />
-                <strong>Mail de contact</strong>
+                <strong>Contact production / diffusion / réservation</strong>
                 <br />
                 <a href="mailto:admin@hintika.fr">admin@hintika.fr</a>
               </p>
+
+              <div className="contact-actions">
+                <a
+                  href="/bulletin-adhesion-hintika.pdf"
+                  className="btn btn-outline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download
+                >
+                  📥 Télécharger la fiche d&apos;inscription
+                </a>
+
+                <a
+                  href="mailto:admin@hintika.fr?subject=R%C3%A9servation%20de%20places%20-%20L%27Amour%20Apr%C3%A8s&body=Bonjour%2C%0D%0A%0D%0AJe%20souhaiterais%20r%C3%A9server%20des%20places%20pour%20le%20spectacle%20L%27Amour%20Apr%C3%A8s.%0D%0A%0D%0ANombre%20de%20places%20%3A%0D%0ADate%20souhait%C3%A9e%20%3A%0D%0ANom%20%2F%20Pr%C3%A9nom%20%3A%0D%0AT%C3%A9l%C3%A9phone%20%3A%0D%0A%0D%0AMerci."
+                  className="btn"
+                >
+                  🎟️ Réserver des places
+                </a>
+              </div>
             </div>
           </div>
         </section>
       </main>
-<footer className="footer">
-  <div className="container footer-inner">
-    <p>
-      © {new Date().getFullYear()} Hintika Production — Tous droits réservés.
-    </p>
 
-    <div className="footer-links">
-      <a href="#top">Retour en haut ↑</a>
+      <footer className="footer">
+        <div className="container footer-inner">
+          <p>
+            © {new Date().getFullYear()} Hintika Production — Tous droits
+            réservés.
+          </p>
 
-      <span className="footer-sep">·</span>
+          <div className="footer-links">
+            <a href="#top">Retour en haut ↑</a>
 
-      <a
-        href="http://tiktok.com/@ann.gisle.glass"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        TikTok
-      </a>
+            <span className="footer-sep">·</span>
 
-      <span className="footer-sep">·</span>
+            <a
+              href="http://tiktok.com/@ann.gisle.glass"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              TikTok
+            </a>
 
-      <a
-        href="https://www.instagram.com/lamourapres_theatre?igsh=MXdsM3dtaTZzeHc0ag=="
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Instagram
-      </a>
+            <span className="footer-sep">·</span>
 
-      <span className="footer-sep">·</span>
+            <a
+              href="https://www.instagram.com/lamourapres_theatre?igsh=MXdsM3dtaTZzeHc0ag=="
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram
+            </a>
 
-      <a
-        href="https://www.facebook.com/anngisel.glass?locale=fr_FR"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Facebook
-      </a>
+            <span className="footer-sep">·</span>
 
-      <span className="footer-sep">·</span>
+            <a
+              href="https://www.facebook.com/anngisel.glass?locale=fr_FR"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Facebook
+            </a>
 
-      <a
-        href="https://fr.ulule.com/ecoutez-marceline/?utm_campaign=presale_222967&utm_source=shared-from-Ulule-success-modal-on---http.referer--&utm_medium=uluid_161017"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Ulule
-      </a>
-    </div>
-  </div>
-</footer>
+            <span className="footer-sep">·</span>
 
-  
+            <a
+              href="https://fr.ulule.com/ecoutez-marceline/?utm_campaign=presale_222967&utm_source=shared-from-Ulule-success-modal-on---http.referer--&utm_medium=uluid_161017"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ulule
+            </a>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
