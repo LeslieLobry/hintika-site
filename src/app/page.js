@@ -353,49 +353,76 @@ Merci.`);
           </div>
         </section>
 
-        <section id="contact" className="section">
-          <div className="container">
-            <h2>
-              <span>Production</span> &amp; contact
-            </h2>
-            <p className="intro">
-              Pour toute demande de programmation, d&apos;informations techniques,
-              de presse ou de réservation, vous pouvez contacter Hintika et la
-              production du spectacle.
-            </p>
+       <section id="contact" className="section">
+  <div className="container">
+    <h2>
+      <span>Production</span> &amp; contact
+    </h2>
 
-            <div className="contact-block">
-              <p>
-                <strong>Hintika Production</strong>
-                <br />
-                Structure de production et d&apos;accompagnement de projets
-                artistiques.
-              </p>
+    <p className="intro">
+      Pour toute demande de programmation, d&apos;informations techniques,
+      de presse ou de réservation, vous pouvez contacter Hintika et la
+      production du spectacle.
+    </p>
 
-              <p>
-                <strong>Contact production / diffusion / réservation</strong>
-                <br />
-                <a href="mailto:admin@hintika.fr">admin@hintika.fr</a>
-              </p>
+    <div className="contact-block">
+      <p>
+        <strong>Hintika Production</strong>
+        <br />
+        Structure de production et d&apos;accompagnement de projets
+        artistiques.
+      </p>
 
-              <div className="contact-actions">
-                <a
-                  href="/bulletin-adhesion-hintika.pdf"
-                  className="btn btn-outline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  download
-                >
-                  📥 Télécharger la fiche d&apos;inscription
-                </a>
+      <p>
+        <strong>Contact production / diffusion / réservation</strong>
+        <br />
+        <a href="mailto:admin@hintika.fr">admin@hintika.fr</a>
+      </p>
 
-                <a href={reservationMailto} className="btn">
-                  🎟️ Réserver des places
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+      <div className="contact-actions">
+        {/* BOUTON PDF */}
+        <a
+          href="/bulletin-adhesion-hintika.pdf"
+          className="btn btn-outline"
+          target="_blank"
+          rel="noopener noreferrer"
+          download
+        >
+          📥 Télécharger la fiche d&apos;inscription
+        </a>
+
+        {/* BOUTON MAILTO */}
+        <a
+          href={`mailto:admin@hintika.fr?subject=${encodeURIComponent(
+            "Réservation de places - L'Amour Après"
+          )}&body=${encodeURIComponent(`Bonjour,
+
+Je souhaiterais réserver des places pour le spectacle L'Amour Après.
+
+Nombre de places :
+Date souhaitée :
+Nom / Prénom :
+Téléphone :
+
+Merci.`)}`}
+          className="btn"
+        >
+          🎟️ Réserver par email
+        </a>
+      </div>
+
+      {/* MESSAGE INFO */}
+      <p className="contact-note">
+        Si le bouton de réservation ne s&apos;ouvre pas sur votre ordinateur,
+        vous pouvez nous écrire directement à :
+      </p>
+
+      <a href="mailto:admin@hintika.fr" className="direct-mail-link">
+        admin@hintika.fr
+      </a>
+    </div>
+  </div>
+</section>
       </main>
 
       <footer className="footer">

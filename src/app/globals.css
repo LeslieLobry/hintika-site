@@ -773,3 +773,22 @@ body {
   gap: 16px;
   margin-top: 24px;
 }
+
+.contact-note {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.direct-mail-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-weight: 600;
+  color: #c9a96e;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.direct-mail-link:hover {
+  opacity: 0.7;
+}
