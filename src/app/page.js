@@ -80,7 +80,7 @@ export default function Home() {
           <div className="hero-text">
             <div className="hero-photo">
               <img
-                src="/HINTIKA.PNG"
+                src="/HINTIKA.png"
                 alt="Affiche du spectacle L'Amour Après"
               />
             </div>
