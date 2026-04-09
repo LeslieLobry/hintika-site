@@ -58,6 +58,23 @@ const marcelineSlides = [
 ];
 
 export default function Home() {
+  const reservationSubject = encodeURIComponent(
+    "Réservation de places - L'Amour Après"
+  );
+
+  const reservationBody = encodeURIComponent(`Bonjour,
+
+Je souhaiterais réserver des places pour le spectacle L'Amour Après.
+
+Nombre de places :
+Date souhaitée :
+Nom / Prénom :
+Téléphone :
+
+Merci.`);
+
+  const reservationMailto = `mailto:admin@hintika.fr?subject=${reservationSubject}&body=${reservationBody}`;
+
   return (
     <>
       <header className="hero" id="top">
@@ -107,7 +124,6 @@ export default function Home() {
       </header>
 
       <main>
-        {/* HINTIKA — LA STRUCTURE */}
         <section id="hintika" className="section">
           <div className="container">
             <h2>
@@ -127,7 +143,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* PRODUCTIONS */}
         <section id="projets" className="section section-alt">
           <div className="container">
             <h2>
@@ -154,7 +169,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* L'AMOUR APRÈS — PRÉSENTATION */}
         <section id="amour-apres" className="section">
           <div className="container">
             <h2>
@@ -191,7 +205,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* L'AMOUR APRÈS — GENÈSE */}
         <section id="amour-apres-genese" className="section section-alt">
           <div className="container">
             <h2>
@@ -219,7 +232,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* L'AMOUR APRÈS — NOTE D'INTENTION */}
         <section id="amour-apres-intention" className="section">
           <div className="container">
             <h2>
@@ -249,7 +261,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ÉQUIPE ARTISTIQUE */}
         <section id="amour-apres-equipe" className="section section-alt">
           <div className="container">
             <h2>
@@ -304,7 +315,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* LES AUTRICES */}
         <section id="autrices" className="section">
           <div className="container">
             <h2>
@@ -343,7 +353,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CONTACT / PRODUCTION */}
         <section id="contact" className="section">
           <div className="container">
             <h2>
@@ -380,10 +389,7 @@ export default function Home() {
                   📥 Télécharger la fiche d&apos;inscription
                 </a>
 
-                <a
-                  href="mailto:admin@hintika.fr?subject=R%C3%A9servation%20de%20places%20-%20L%27Amour%20Apr%C3%A8s&body=Bonjour%2C%0D%0A%0D%0AJe%20souhaiterais%20r%C3%A9server%20des%20places%20pour%20le%20spectacle%20L%27Amour%20Apr%C3%A8s.%0D%0A%0D%0ANombre%20de%20places%20%3A%0D%0ADate%20souhait%C3%A9e%20%3A%0D%0ANom%20%2F%20Pr%C3%A9nom%20%3A%0D%0AT%C3%A9l%C3%A9phone%20%3A%0D%0A%0D%0AMerci."
-                  className="btn"
-                >
+                <a href={reservationMailto} className="btn">
                   🎟️ Réserver des places
                 </a>
               </div>
