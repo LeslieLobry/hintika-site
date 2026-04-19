@@ -77,49 +77,21 @@ Merci.`);
 
   return (
     <>
-      <header className="hero" id="top">
-        <div className="hero-overlay" />
-        <div className="hero-content">
-          <nav className="navbar">
-            <a href="#top" className="nav-logo">
-              Hintika
-            </a>
-            <div className="nav-links">
-              <a href="#hintika">La compagnie</a>
-              <a href="#projets">Productions</a>
-              <a href="#amour-apres">L&apos;Amour Après</a>
-              <a href="#amour-apres-equipe">L&apos;équipe</a>
-              <a href="/video">Vidéo</a>
-              <a href="#contact">Contact</a>
-            </div>
-          </nav>
+      <header className="hero-video-fullscreen" id="top">
+        <div className="hero-video-player">
+          <iframe
+            src="https://www.youtube.com/embed/3QjBiHw8Oqw?autoplay=1&mute=1&controls=1&rel=0&modestbranding=1&playsinline=1"
+            title="Teaser L'Amour Après"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
 
-          <div className="hero-text">
-            <div className="hero-photo">
-              <img
-                src="/HINTIKA.png"
-                alt="Affiche du spectacle L'Amour Après"
-              />
-            </div>
-
-            <div className="hero-copy">
-              <h1 className="logo">Hintika Production</h1>
-
-              <p className="tagline">
-                Une maison de création qui accompagne, éclaire et produit des
-                projets engagés, sensibles et profondément humains.
-              </p>
-
-              <div className="hero-buttons">
-                <a href="#projets" className="btn">
-                  Découvrir nos productions
-                </a>
-                <a href="#contact" className="btn btn-outline">
-                  Contacter Hintika
-                </a>
-              </div>
-            </div>
-          </div>
+        <div className="hero-video-actions">
+          <a href="#hintika" className="btn">
+            Entrer sur le site
+          </a>
         </div>
       </header>
 
@@ -353,76 +325,62 @@ Merci.`);
           </div>
         </section>
 
-       <section id="contact" className="section">
-  <div className="container">
-    <h2>
-      <span>Production</span> &amp; contact
-    </h2>
+        <section id="contact" className="section">
+          <div className="container">
+            <h2>
+              <span>Production</span> &amp; contact
+            </h2>
 
-    <p className="intro">
-      Pour toute demande de programmation, d&apos;informations techniques,
-      de presse ou de réservation, vous pouvez contacter Hintika et la
-      production du spectacle.
-    </p>
+            <p className="intro">
+              Pour toute demande de programmation, d&apos;informations techniques,
+              de presse ou de réservation, vous pouvez contacter Hintika et la
+              production du spectacle.
+            </p>
 
-    <div className="contact-block">
-      <p>
-        <strong>Hintika Production</strong>
-        <br />
-        Structure de production et d&apos;accompagnement de projets
-        artistiques.
-      </p>
+            <div className="contact-block">
+              <p>
+                <strong>Hintika Production</strong>
+                <br />
+                Structure de production et d&apos;accompagnement de projets
+                artistiques.
+              </p>
 
-      <p>
-        <strong>Contact production / diffusion / réservation</strong>
-        <br />
-        <a href="mailto:admin@hintika.fr">admin@hintika.fr</a>
-      </p>
+              <p>
+                <strong>Contact production / diffusion / réservation</strong>
+                <br />
+                <a href="mailto:admin@hintika.fr">admin@hintika.fr</a>
+              </p>
 
-      <div className="contact-actions">
-        {/* BOUTON PDF */}
-        <a
-          href="/bulletin-adhesion-hintika.pdf"
-          className="btn btn-outline"
-          target="_blank"
-          rel="noopener noreferrer"
-          download
-        >
-          📥 Télécharger la fiche d&apos;inscription
-        </a>
+              <div className="contact-actions">
+                <a
+                  href="/bulletin-adhesion-hintika.pdf"
+                  className="btn btn-outline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download
+                >
+                  📥 Télécharger la fiche d&apos;inscription
+                </a>
 
-        {/* BOUTON MAILTO */}
-        <a
-          href={`mailto:admin@hintika.fr?subject=${encodeURIComponent(
-            "Réservation de places - L'Amour Après"
-          )}&body=${encodeURIComponent(`Bonjour,
+                <a
+                  href={reservationMailto}
+                  className="btn"
+                >
+                  🎟️ Réserver par email
+                </a>
+              </div>
 
-Je souhaiterais réserver des places pour le spectacle L'Amour Après.
+              <p className="contact-note">
+                Si le bouton de réservation ne s&apos;ouvre pas sur votre ordinateur,
+                vous pouvez nous écrire directement à :
+              </p>
 
-Nombre de places :
-Date souhaitée :
-Nom / Prénom :
-Téléphone :
-
-Merci.`)}`}
-          className="btn"
-        >
-          🎟️ Réserver par email
-        </a>
-      </div>
-
-      {/* MESSAGE INFO */}
-      <p className="contact-note">
-        Si le bouton de réservation ne s&apos;ouvre pas sur votre ordinateur,
-        vous pouvez nous écrire directement à :
-      </p>
-
-      <a href="mailto:admin@hintika.fr" className="direct-mail-link">
-        admin@hintika.fr
-      </a>
-    </div>
-  </div>
-</section>
+              <a href="mailto:admin@hintika.fr" className="direct-mail-link">
+                admin@hintika.fr
+              </a>
+            </div>
+          </div>
+        </section>
       </main>
 
       <footer className="footer">
