@@ -116,7 +116,7 @@ Merci.`);
           <div className="hero-text">
             <div className="hero-photo">
               <img
-                src="/HINTIKA.pdf"
+                src="/HINTIKA.png"
                 alt="Affiche du spectacle L'Amour Après"
               />
             </div>
