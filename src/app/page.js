@@ -77,8 +77,9 @@ Merci.`);
 
   return (
     <>
-      <header className="hero-video-fullscreen" id="top">
-        <div className="hero-video-player">
+      {/* 🎬 VIDEO INTRO AJOUTÉE SANS RIEN SUPPRIMER */}
+      <section className="intro-video-section" id="top">
+        <div className="intro-video-wrapper">
           <iframe
             src="https://www.youtube.com/embed/3QjBiHw8Oqw?autoplay=1&mute=1&controls=1&rel=0&modestbranding=1&playsinline=1"
             title="Teaser L'Amour Après"
@@ -88,10 +89,56 @@ Merci.`);
           />
         </div>
 
-        <div className="hero-video-actions">
-          <a href="#hintika" className="btn">
+        <div className="intro-video-actions">
+          <a href="#site-content" className="btn">
             Entrer sur le site
           </a>
+        </div>
+      </section>
+
+      <header className="hero" id="site-content">
+        <div className="hero-overlay" />
+        <div className="hero-content">
+          <nav className="navbar">
+            <a href="#top" className="nav-logo">
+              Hintika
+            </a>
+            <div className="nav-links">
+              <a href="#hintika">La compagnie</a>
+              <a href="#projets">Productions</a>
+              <a href="#amour-apres">L&apos;Amour Après</a>
+              <a href="#amour-apres-equipe">L&apos;équipe</a>
+              <a href="/video">Vidéo</a>
+              <a href="#contact">Contact</a>
+            </div>
+          </nav>
+
+          <div className="hero-text">
+            <div className="hero-photo">
+              <img
+                src="/HINTIKA.png"
+                alt="Affiche du spectacle L'Amour Après"
+              />
+            </div>
+
+            <div className="hero-copy">
+              <h1 className="logo">Hintika Production</h1>
+
+              <p className="tagline">
+                Une maison de création qui accompagne, éclaire et produit des
+                projets engagés, sensibles et profondément humains.
+              </p>
+
+              <div className="hero-buttons">
+                <a href="#projets" className="btn">
+                  Découvrir nos productions
+                </a>
+                <a href="#contact" className="btn btn-outline">
+                  Contacter Hintika
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </header>
 
@@ -352,6 +399,7 @@ Merci.`);
               </p>
 
               <div className="contact-actions">
+                {/* BOUTON PDF */}
                 <a
                   href="/bulletin-adhesion-hintika.pdf"
                   className="btn btn-outline"
@@ -362,14 +410,27 @@ Merci.`);
                   📥 Télécharger la fiche d&apos;inscription
                 </a>
 
+                {/* BOUTON MAILTO */}
                 <a
-                  href={reservationMailto}
+                  href={`mailto:admin@hintika.fr?subject=${encodeURIComponent(
+                    "Réservation de places - L'Amour Après"
+                  )}&body=${encodeURIComponent(`Bonjour,
+
+Je souhaiterais réserver des places pour le spectacle L'Amour Après.
+
+Nombre de places :
+Date souhaitée :
+Nom / Prénom :
+Téléphone :
+
+Merci.`)}`}
                   className="btn"
                 >
                   🎟️ Réserver par email
                 </a>
               </div>
 
+              {/* MESSAGE INFO */}
               <p className="contact-note">
                 Si le bouton de réservation ne s&apos;ouvre pas sur votre ordinateur,
                 vous pouvez nous écrire directement à :
