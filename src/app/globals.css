@@ -823,3 +823,44 @@ body {
   display: flex;
   justify-content: center;
 }
+.intro-video-section {
+  min-height: 100vh;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.intro-video-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  aspect-ratio: 16 / 9;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.intro-video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+}
+
+.intro-video-actions {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .intro-video-section {
+    padding: 16px;
+  }
+
+  .intro-video-wrapper {
+    border-radius: 12px;
+  }
+}
