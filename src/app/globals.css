@@ -864,3 +864,86 @@ body {
     border-radius: 12px;
   }
 }
+/* 🎧 SECTION PODCAST */
+
+#podcast .card {
+  background: linear-gradient(145deg, #0f1c2e, #14253d);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* effet léger au hover */
+#podcast .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* petit glow subtil */
+#podcast .card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(240, 208, 132, 0.08) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+#podcast .card:hover::before {
+  opacity: 1;
+}
+
+/* titre */
+#podcast h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: #f0d084;
+}
+
+/* meta */
+#podcast .card-meta {
+  color: #a7adc8;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* texte */
+#podcast p {
+  color: #eaeaf2;
+  line-height: 1.6;
+}
+
+/* bouton podcast */
+#podcast .btn {
+  margin-top: 1.5rem;
+  display: inline-block;
+  background: #f0d084;
+  color: #0e1a2b;
+  font-weight: 600;
+  padding: 0.8rem 1.4rem;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+#podcast .btn:hover {
+  background: #e0c084;
+  transform: scale(1.05);
+}
+
+/* 🎧 petit badge audio */
+#podcast .card::after {
+  content: "🎧";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 1.4rem;
+  opacity: 0.8;
+}

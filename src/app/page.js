@@ -1,5 +1,3 @@
-// app/page.js
-
 import PhotoCarousel from "../app/components/PhotoCarousel/PhotoCarousel";
 
 // 🔹 Slides pour la galerie principale
@@ -19,6 +17,34 @@ const galerieSlides = [
   {
     src: "/4.JPG",
     alt: "Essais lumière et espace",
+  },
+  {
+    src: "/ag1.JPG",
+    alt: "répétition",
+  },
+  {
+    src: "/ag2.JPG",
+    alt: "répétition",
+  },
+  {
+    src: "/ag3.JPG",
+    alt: "répétition",
+  },
+  {
+    src: "/ag4.JPG",
+    alt: "répétition",
+  },
+  {
+    src: "/ag5.JPG",
+    alt: "répétition",
+  },
+  {
+    src: "/ag6.JPG",
+    alt: "répétition",
+  },
+  {
+    src: "/ag7.JPG",
+    alt: "répétition",
   },
 ];
 
@@ -75,6 +101,9 @@ Merci.`);
 
   const reservationMailto = `mailto:admin@hintika.fr?subject=${reservationSubject}&body=${reservationBody}`;
 
+  const podcastLink =
+    "https://idfm98.fr/podcast/les-secrets-de-la-servante-le-samedi-a-16h-avec-christelle-barrilliet/";
+
   return (
     <>
       {/* 🎬 VIDEO INTRO AJOUTÉE SANS RIEN SUPPRIMER */}
@@ -109,6 +138,7 @@ Merci.`);
               <a href="#amour-apres">L&apos;Amour Après</a>
               <a href="#amour-apres-equipe">L&apos;équipe</a>
               <a href="/video">Vidéo</a>
+              <a href="#podcast">Podcast</a>
               <a href="#contact">Contact</a>
             </div>
           </nav>
@@ -157,7 +187,8 @@ Merci.`);
               scène, des interprètes et des auteurs dans des créations qui
               interrogent notre époque, mêlant théâtre, écriture, image et
               matière documentaire. Nous défendons une approche humaine,
-              attentive aux processus de travail autant qu&apos;aux formes finales.
+              attentive aux processus de travail autant qu&apos;aux formes
+              finales.
             </p>
           </div>
         </section>
@@ -218,9 +249,20 @@ Merci.`);
               collective et désir de vivre.
             </p>
 
-            <a href="/video" className="btn btn-video">
-              Voir la vidéo du spectacle
-            </a>
+            <div className="hero-buttons">
+              <a href="/video" className="btn btn-video">
+                Voir la vidéo du spectacle
+              </a>
+
+              <a
+                href={podcastLink}
+                className="btn btn-outline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                🎧 Écouter le podcast
+              </a>
+            </div>
           </div>
         </section>
 
@@ -231,8 +273,8 @@ Merci.`);
             </h2>
             <p className="intro">
               Tout part d&apos;une lecture : un jour de pluie, un livre ouvert par
-              hasard et refermé au cœur de la nuit, avec l&apos;évidence qu&apos;il faut
-              en partager la voix sur un plateau.
+              hasard et refermé au cœur de la nuit, avec l&apos;évidence qu&apos;il
+              faut en partager la voix sur un plateau.
             </p>
             <p>
               Ann-Gisel Glass y reconnaît quelque chose de sa propre histoire et
@@ -242,11 +284,11 @@ Merci.`);
               l&apos;amour, l&apos;humour et la liberté.
             </p>
             <p>
-              Après une première collaboration autour de <em>La Princesse blanche</em>{" "}
-              de Rilke, Ann-Gisel Glass et Didier Bernard cherchaient un nouveau
-              projet commun. Ils le trouvent dans ce texte, qui devient le point
-              de départ d&apos;une pièce pour une actrice dans une mise en scène
-              sobre et attentive à la parole.
+              Après une première collaboration autour de{" "}
+              <em>La Princesse blanche</em> de Rilke, Ann-Gisel Glass et Didier
+              Bernard cherchaient un nouveau projet commun. Ils le trouvent dans
+              ce texte, qui devient le point de départ d&apos;une pièce pour une
+              actrice dans une mise en scène sobre et attentive à la parole.
             </p>
           </div>
         </section>
@@ -277,6 +319,42 @@ Merci.`);
               du bonheur revient, simple, presque naïve, mais essentielle&nbsp;:
               « Êtes-vous en vie&nbsp;? Êtes-vous heureux&nbsp;? ».
             </p>
+          </div>
+        </section>
+
+        <section id="podcast" className="section section-alt">
+          <div className="container">
+            <h2>
+              <span>Podcast</span> autour de la pièce
+            </h2>
+
+            <p className="intro">
+              Retrouvez un échange radiophonique autour de <em>L&apos;Amour Après</em>,
+              de sa création, de ses résonances et de la parole portée par le
+              spectacle.
+            </p>
+
+            <div className="card">
+              <h3>Les secrets de la servante</h3>
+              <p className="card-meta">
+                IDFM 98 · Avec Christelle Barrilliet
+              </p>
+              <p>
+                Une rencontre à écouter pour prolonger l&apos;univers de la pièce
+                et découvrir un autre regard sur son cheminement artistique.
+              </p>
+
+              <div className="contact-actions">
+                <a
+                  href={podcastLink}
+                  className="btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  🎧 Écouter le podcast
+                </a>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -411,29 +489,25 @@ Merci.`);
                 </a>
 
                 {/* BOUTON MAILTO */}
-                <a
-                  href={`mailto:admin@hintika.fr?subject=${encodeURIComponent(
-                    "Réservation de places - L'Amour Après"
-                  )}&body=${encodeURIComponent(`Bonjour,
-
-Je souhaiterais réserver des places pour le spectacle L'Amour Après.
-
-Nombre de places :
-Date souhaitée :
-Nom / Prénom :
-Téléphone :
-
-Merci.`)}`}
-                  className="btn"
-                >
+                <a href={reservationMailto} className="btn">
                   🎟️ Réserver par email
+                </a>
+
+                {/* BOUTON PODCAST */}
+                <a
+                  href={podcastLink}
+                  className="btn btn-outline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  🎧 Écouter le podcast
                 </a>
               </div>
 
               {/* MESSAGE INFO */}
               <p className="contact-note">
-                Si le bouton de réservation ne s&apos;ouvre pas sur votre ordinateur,
-                vous pouvez nous écrire directement à :
+                Si le bouton de réservation ne s&apos;ouvre pas sur votre
+                ordinateur, vous pouvez nous écrire directement à :
               </p>
 
               <a href="mailto:admin@hintika.fr" className="direct-mail-link">
@@ -492,6 +566,16 @@ Merci.`)}`}
               rel="noopener noreferrer"
             >
               Ulule
+            </a>
+
+            <span className="footer-sep">·</span>
+
+            <a
+              href={podcastLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Podcast
             </a>
           </div>
         </div>
