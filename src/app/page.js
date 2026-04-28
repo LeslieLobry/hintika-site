@@ -110,7 +110,7 @@ Merci.`);
       <section className="intro-video-section" id="top">
         <div className="intro-video-wrapper">
           <iframe
-            src="https://www.youtube.com/embed/3QjBiHw8Oqw?autoplay=1&mute=1&controls=1&rel=0&modestbranding=1&playsinline=1"
+            src="https://www.youtube.com/embed/3QjBiHw8Oqw?autoplay=1=1&controls=1&rel=0&modestbranding=1&playsinline=1"
             title="Teaser L'Amour Après"
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture"
