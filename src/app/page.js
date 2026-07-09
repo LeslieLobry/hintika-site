@@ -103,7 +103,8 @@ Merci.`);
 
   const podcastLink =
     "https://idfm98.fr/podcast/les-secrets-de-la-servante-le-samedi-a-16h-avec-christelle-barrilliet/";
-
+const radioInterviewLink =
+  "https://valeursenjeu.fr/wp-content/uploads/2026/07/Lamour-apr%C3%A8s-complet.mp3";
   return (
     <>
       {/* 🎬 VIDEO INTRO AJOUTÉE SANS RIEN SUPPRIMER */}
@@ -322,41 +323,73 @@ Merci.`);
           </div>
         </section>
 
-        <section id="podcast" className="section section-alt">
-          <div className="container">
-            <h2>
-              <span>Podcast</span> autour de la pièce
-            </h2>
+       <section id="podcast" className="section section-alt">
+  <div className="container">
+    <h2>
+      <span>Podcasts</span> &amp; Interviews radio
+    </h2>
 
-            <p className="intro">
-              Retrouvez un échange radiophonique autour de <em>L&apos;Amour Après</em>,
-              de sa création, de ses résonances et de la parole portée par le
-              spectacle.
-            </p>
+    <p className="intro">
+      Retrouvez les différentes émissions consacrées à{" "}
+      <em>L&apos;Amour Après</em>, sa création et les échanges autour de la
+      mémoire portée par le spectacle.
+    </p>
 
-            <div className="card">
-              <h3>Les secrets de la servante</h3>
-              <p className="card-meta">
-                IDFM 98 · Avec Christelle Barrilliet
-              </p>
-              <p>
-                Une rencontre à écouter pour prolonger l&apos;univers de la pièce
-                et découvrir un autre regard sur son cheminement artistique.
-              </p>
+    <div className="grid">
+      {/* Podcast IDFM */}
+      <article className="card">
+        <h3>Les secrets de la servante</h3>
 
-              <div className="contact-actions">
-                <a
-                  href={podcastLink}
-                  className="btn"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  🎧 Écouter le podcast
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+        <p className="card-meta">
+          IDFM 98 · Avec Christelle Barrilliet
+        </p>
+
+        <p>
+          Une rencontre consacrée à la création de <em>L&apos;Amour Après</em>,
+          à son univers artistique et au travail mené autour de la mémoire de
+          Marceline Loridan-Ivens.
+        </p>
+
+        <div className="contact-actions">
+          <a
+            href={podcastLink}
+            className="btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            🎧 Écouter le podcast
+          </a>
+        </div>
+      </article>
+
+      {/* Interview Valeurs en Jeu */}
+      <article className="card">
+        <h3>Direct en Jeu</h3>
+
+        <p className="card-meta">
+          Valeurs en Jeu · Lundi 6 juillet 2026 · 12 min
+        </p>
+
+        <p>
+          Interview d'Alain Moreno avec Gérard Cherqui (Mémorial de la Shoah),
+          suivie d'un entretien avec Ann-Gisel Glass autour du spectacle
+          <em> L&apos;Amour Après</em>.
+        </p>
+
+        <div className="contact-actions">
+          <a
+            href={radioInterviewLink}
+            className="btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            🎧 Écouter l'interview
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
         <section id="amour-apres-equipe" className="section section-alt">
           <div className="container">
