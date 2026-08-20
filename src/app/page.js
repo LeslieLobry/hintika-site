@@ -5,19 +5,19 @@ import PhotoCarousel from "../app/components/PhotoCarousel/PhotoCarousel";
 // 🔹 Slides pour la galerie principale
 const galerieSlides = [
    {
-    src: "/ag9.JPG",
+    src: "/ag9.jpg",
     alt: "Répétitions sur le plateau",
   },
    {
-    src: "/ag10.JPG",
+    src: "/ag10.jpg",
     alt: "Répétitions sur le plateau",
   },
    {
-    src: "/ag11.JPG",
+    src: "/ag11.jpg",
     alt: "Répétitions sur le plateau",
   },
    {
-    src: "/ag12.JPG",
+    src: "/ag12.jpg",
     alt: "Répétitions sur le plateau",
   },
   {
@@ -223,7 +223,7 @@ Merci.`);
               <a href="#amour-apres">L&apos;Amour Après</a>
               <a href="#amour-apres-equipe">L&apos;équipe</a>
               <a href="/video">Vidéo</a>
-              <a href="#podcast">Podcast</a>
+              <a href="#podcast">Radio &amp; interviews</a>
 
               {/* NOUVEAU */}
               <a href="#presse">Presse</a>
@@ -432,73 +432,101 @@ Merci.`);
         </section>
 
         {/* PODCASTS */}
-        <section id="podcast" className="section section-alt">
-          <div className="container">
-            <h2>
-              <span>Podcasts</span> &amp; Interviews radio
-            </h2>
+      <section id="podcast" className="section section-alt">
+  <div className="container">
+    <h2>
+      <span>Podcasts</span>, radio &amp; interviews
+    </h2>
 
-            <p className="intro">
-              Retrouvez les différentes émissions consacrées à{" "}
-              <em>L&apos;Amour Après</em>, sa création et les échanges autour de
-              la mémoire portée par le spectacle.
-            </p>
+    <p className="intro">
+      Retrouvez les interviews, émissions et rencontres consacrées à{" "}
+      <em>L&apos;Amour Après</em>, à sa création et à la mémoire de
+      Marceline Loridan-Ivens.
+    </p>
 
-            <div className="grid">
-              {/* Podcast IDFM */}
-              <article className="card">
-                <h3>Les secrets de la servante</h3>
+    <div className="grid">
 
-                <p className="card-meta">
-                  IDFM 98 · Avec Christelle Barrilliet
-                </p>
+      {/* BACKSTAGE TV */}
+      <article className="card">
+        <h3>BackstageTV</h3>
 
-                <p>
-                  Une rencontre consacrée à la création de{" "}
-                  <em>L&apos;Amour Après</em>, à son univers artistique et au
-                  travail mené autour de la mémoire de Marceline Loridan-Ivens.
-                </p>
+        <p className="card-meta">
+          Interview vidéo · Festival d&apos;Avignon 2026
+        </p>
 
-                <div className="contact-actions">
-                  <a
-                    href={podcastLink}
-                    className="btn"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    🎧 Écouter le podcast
-                  </a>
-                </div>
-              </article>
+        <p>
+          Rencontre avec l&apos;équipe de <em>L&apos;Amour Après</em> autour
+          du spectacle, de sa création et du travail mené pour faire entendre
+          sur scène la parole et le parcours de Marceline Loridan-Ivens.
+        </p>
 
-              {/* Interview Valeurs en Jeu */}
-              <article className="card">
-                <h3>Direct en Jeu</h3>
+        <div className="contact-actions">
+          <a
+            href="https://www.youtube.com/watch?v=YJgajjeGpuQ"
+            className="btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ▶️ Voir l&apos;interview
+          </a>
+        </div>
+      </article>
 
-                <p className="card-meta">
-                  Valeurs en Jeu · Lundi 6 juillet 2026 · 12 min
-                </p>
+      {/* DIRECT EN JEU */}
+      <article className="card">
+        <h3>Direct en Jeu</h3>
 
-                <p>
-                  Interview d&apos;Alain Moreno avec Gérard Cherqui (Mémorial de
-                  la Shoah), suivie d&apos;un entretien avec Ann-Gisel Glass
-                  autour du spectacle <em>L&apos;Amour Après</em>.
-                </p>
+        <p className="card-meta">
+          Valeurs en Jeu · Lundi 6 juillet 2026 · 12 min
+        </p>
 
-                <div className="contact-actions">
-                  <a
-                    href={radioInterviewLink}
-                    className="btn"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    🎧 Écouter l&apos;interview
-                  </a>
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
+        <p>
+          Interview d&apos;Alain Moreno avec Gérard Cherqui du Mémorial de
+          la Shoah, suivie d&apos;un entretien avec Ann-Gisel Glass autour
+          de <em>L&apos;Amour Après</em>.
+        </p>
+
+        <div className="contact-actions">
+          <a
+            href="https://valeursenjeu.fr/wp-content/uploads/2026/07/Lamour-apr%C3%A8s-complet.mp3"
+            className="btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            🎧 Écouter l&apos;interview
+          </a>
+        </div>
+      </article>
+
+      {/* IDFM 98 */}
+      <article className="card">
+        <h3>Les secrets de la servante</h3>
+
+        <p className="card-meta">
+          IDFM 98 · Avec Christelle Barrilliet
+        </p>
+
+        <p>
+          Une émission consacrée à la création de{" "}
+          <em>L&apos;Amour Après</em>, à son univers artistique et au
+          travail mené autour de la mémoire de Marceline Loridan-Ivens.
+        </p>
+
+        <div className="contact-actions">
+          <a
+            href="https://idfm98.fr/podcast/les-secrets-de-la-servante-le-samedi-a-16h-avec-christelle-barrilliet/"
+            className="btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            🎧 Écouter le podcast
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
 
         {/* ====================================================== */}
         {/* ===================== PRESSE ========================== */}
