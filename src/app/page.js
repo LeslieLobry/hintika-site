@@ -1,7 +1,25 @@
+// app/page.js
+
 import PhotoCarousel from "../app/components/PhotoCarousel/PhotoCarousel";
 
 // 🔹 Slides pour la galerie principale
 const galerieSlides = [
+   {
+    src: "/ag9.JPG",
+    alt: "Répétitions sur le plateau",
+  },
+   {
+    src: "/ag10.JPG",
+    alt: "Répétitions sur le plateau",
+  },
+   {
+    src: "/ag11.JPG",
+    alt: "Répétitions sur le plateau",
+  },
+   {
+    src: "/ag12.JPG",
+    alt: "Répétitions sur le plateau",
+  },
   {
     src: "/1.JPG",
     alt: "Répétitions sur le plateau",
@@ -20,31 +38,31 @@ const galerieSlides = [
   },
   {
     src: "/ag1.JPG",
-    alt: "répétition",
+    alt: "Répétition",
   },
   {
     src: "/ag2.JPG",
-    alt: "répétition",
+    alt: "Répétition",
   },
   {
     src: "/ag3.JPG",
-    alt: "répétition",
+    alt: "Répétition",
   },
   {
     src: "/ag4.JPG",
-    alt: "répétition",
+    alt: "Répétition",
   },
   {
     src: "/ag5.JPG",
-    alt: "répétition",
+    alt: "Répétition",
   },
   {
     src: "/ag6.JPG",
-    alt: "répétition",
+    alt: "Répétition",
   },
   {
     src: "/ag7.JPG",
-    alt: "répétition",
+    alt: "Répétition",
   },
 ];
 
@@ -76,10 +94,71 @@ const didierSlides = [
   },
 ];
 
+// 🔹 Marceline
 const marcelineSlides = [
   {
     src: "/Marceline.jpeg",
     alt: "Marceline Loridan-Ivens",
+  },
+];
+
+// 🔹 Articles de presse
+const pressArticles = [
+  {
+    media: "La Provence",
+    title: "« L'Amour après », un poignant témoignage de femme",
+    meta: "Jean-Noël Grando · 7 juillet 2026",
+    description:
+      "La Provence salue un spectacle profondément humain et émouvant, porté par Ann-Gisel Glass. Une ode à la vie, à la liberté et au courage des femmes.",
+    pdf: "/presse/la-provence.pdf",
+  },
+  {
+    media: "L'Écho du Mardi",
+    title: "« L'Amour plus fort que l'indicible »",
+    meta: "Mireille Hurlin · 5 juillet 2026",
+    description:
+      "Une chronique qui souligne la profonde justesse d'Ann-Gisel Glass, la sobriété de la mise en scène de Didier Bernard et la force de cette mémoire devenue vivante au théâtre.",
+    pdf: "/presse/echo-du-mardi.pdf",
+  },
+  {
+    media: "RegArts",
+    title: "L'Amour Après — Festival Off d'Avignon 2026",
+    meta: "Claude Bourbon · Avignon 2026",
+    description:
+      "RegArts met en avant un portrait scénique sensible, sobre et précis, faisant entendre avec force le parcours d'une femme libre refusant de se laisser définir par la souffrance.",
+    pdf: "/presse/regarts.pdf",
+  },
+  {
+    media: "La Théâtrothèque",
+    title: "« Une belle interprétation »",
+    meta: "Geneviève Brissot · 25 juillet 2026",
+    description:
+      "La Théâtrothèque salue la sincérité et la profonde sensibilité avec lesquelles Ann-Gisel Glass fait entendre les douleurs, les joies, les désirs et surtout la liberté de Marceline.",
+    pdf: "/presse/theatrotheque.pdf",
+  },
+  {
+    media: "Théâtre au Vent",
+    title: "L'Amour Après au Théâtre des 3S",
+    meta: "Evelyne Trân · 5 août 2026",
+    description:
+      "Une chronique sensible autour de la transmission, de la personnalité de Marceline Loridan-Ivens et de l'interprétation d'Ann-Gisel Glass, décrite comme sobre, vibrante et profondément humaine.",
+    pdf: "/presse/theatre-au-vent.pdf",
+  },
+  {
+    media: "Culture-Tops",
+    title: "Festival Off d'Avignon — 4 cœurs",
+    meta: "Jean-Pierre Hané · 26 juillet 2026",
+    description:
+      "Culture-Tops attribue quatre cœurs au spectacle et souligne l'authenticité d'Ann-Gisel Glass dans un récit sans pathos, consacré au courage, à la liberté et à l'appétit de vivre.",
+    pdf: "/presse/culture-tops.pdf",
+  },
+  {
+    media: "Froggy's Delight",
+    title: "« Remarquable et poignant. Coup de cœur ! »",
+    meta: "Nicole Aramdam · Avignon, juillet 2026",
+    description:
+      "Froggy's Delight salue la présence lumineuse et la justesse d'Ann-Gisel Glass ainsi que l'élégance et la grande épure de la mise en scène de Didier Bernard.",
+    pdf: "/presse/froggys-delight.pdf",
   },
 ];
 
@@ -103,11 +182,13 @@ Merci.`);
 
   const podcastLink =
     "https://idfm98.fr/podcast/les-secrets-de-la-servante-le-samedi-a-16h-avec-christelle-barrilliet/";
-const radioInterviewLink =
-  "https://valeursenjeu.fr/wp-content/uploads/2026/07/Lamour-apr%C3%A8s-complet.mp3";
+
+  const radioInterviewLink =
+    "https://valeursenjeu.fr/wp-content/uploads/2026/07/Lamour-apr%C3%A8s-complet.mp3";
+
   return (
     <>
-      {/* 🎬 VIDEO INTRO AJOUTÉE SANS RIEN SUPPRIMER */}
+      {/* 🎬 VIDEO INTRO */}
       <section className="intro-video-section" id="top">
         <div className="intro-video-wrapper">
           <iframe
@@ -126,13 +207,16 @@ const radioInterviewLink =
         </div>
       </section>
 
+      {/* HERO */}
       <header className="hero" id="site-content">
         <div className="hero-overlay" />
+
         <div className="hero-content">
           <nav className="navbar">
             <a href="#top" className="nav-logo">
               Hintika
             </a>
+
             <div className="nav-links">
               <a href="#hintika">La compagnie</a>
               <a href="#projets">Productions</a>
@@ -140,6 +224,10 @@ const radioInterviewLink =
               <a href="#amour-apres-equipe">L&apos;équipe</a>
               <a href="/video">Vidéo</a>
               <a href="#podcast">Podcast</a>
+
+              {/* NOUVEAU */}
+              <a href="#presse">Presse</a>
+
               <a href="#contact">Contact</a>
             </div>
           </nav>
@@ -164,6 +252,7 @@ const radioInterviewLink =
                 <a href="#projets" className="btn">
                   Découvrir nos productions
                 </a>
+
                 <a href="#contact" className="btn btn-outline">
                   Contacter Hintika
                 </a>
@@ -174,15 +263,18 @@ const radioInterviewLink =
       </header>
 
       <main>
+        {/* HINTIKA */}
         <section id="hintika" className="section">
           <div className="container">
             <h2>
               <span>Hintika</span>, la structure
             </h2>
+
             <p className="intro">
               Hintika est une structure de production née du désir de porter des
               projets artistiques forts, incarnés et ancrés dans le réel.
             </p>
+
             <p>
               Nous accompagnons des artistes, des metteuses et metteurs en
               scène, des interprètes et des auteurs dans des créations qui
@@ -194,6 +286,7 @@ const radioInterviewLink =
           </div>
         </section>
 
+        {/* PRODUCTIONS */}
         <section id="projets" className="section section-alt">
           <div className="container">
             <h2>
@@ -203,15 +296,18 @@ const radioInterviewLink =
             <div className="grid">
               <article className="card">
                 <h3>L&apos;Amour Après</h3>
+
                 <p className="card-meta">
                   En création · Avec Ann-Gisel Glass · Mise en scène Didier
                   Bernard
                 </p>
+
                 <p>
                   Premier projet produit par Hintika : une adaptation sensible
-                  et profondément incarnée du livre de Marceline Loridan-Ivens et
-                  Judith Perrignon.
+                  et profondément incarnée du livre de Marceline Loridan-Ivens
+                  et Judith Perrignon.
                 </p>
+
                 <a href="#amour-apres" className="card-link">
                   Découvrir le projet →
                 </a>
@@ -220,6 +316,7 @@ const radioInterviewLink =
           </div>
         </section>
 
+        {/* L'AMOUR APRÈS */}
         <section id="amour-apres" className="section">
           <div className="container">
             <h2>
@@ -231,6 +328,7 @@ const radioInterviewLink =
                 <h2>
                   <span>Galerie</span> photos
                 </h2>
+
                 <PhotoCarousel slides={galerieSlides} />
               </div>
             </section>
@@ -241,10 +339,11 @@ const radioInterviewLink =
               déportation, où se rejoue la conquête de la liberté et la
               réconciliation entre la femme et la survivante.
             </p>
+
             <p>
-              Sur scène, une femme seule, entourée d&apos;images et de voix. Elle
-              convoque les rencontres qui ont jalonné sa vie d&apos;après : les
-              hommes de passage, les amitiés, les compagnons de route et le
+              Sur scène, une femme seule, entourée d&apos;images et de voix.
+              Elle convoque les rencontres qui ont jalonné sa vie d&apos;après :
+              les hommes de passage, les amitiés, les compagnons de route et le
               cinéma, comme espace de parole et de transmission. Le spectacle
               tisse un dialogue sensible entre mémoire intime, histoire
               collective et désir de vivre.
@@ -267,23 +366,27 @@ const radioInterviewLink =
           </div>
         </section>
 
+        {/* GENÈSE */}
         <section id="amour-apres-genese" className="section section-alt">
           <div className="container">
             <h2>
               <span>Genèse</span> du projet
             </h2>
+
             <p className="intro">
-              Tout part d&apos;une lecture : un jour de pluie, un livre ouvert par
-              hasard et refermé au cœur de la nuit, avec l&apos;évidence qu&apos;il
-              faut en partager la voix sur un plateau.
+              Tout part d&apos;une lecture : un jour de pluie, un livre ouvert
+              par hasard et refermé au cœur de la nuit, avec l&apos;évidence
+              qu&apos;il faut en partager la voix sur un plateau.
             </p>
+
             <p>
               Ann-Gisel Glass y reconnaît quelque chose de sa propre histoire et
               de celle de sa famille, sans que les parcours soient identiques.
-              Ce qui s&apos;impose avant tout, c&apos;est le mouvement de renaissance
-              après la destruction, la manière dont Marceline choisit la vie,
-              l&apos;amour, l&apos;humour et la liberté.
+              Ce qui s&apos;impose avant tout, c&apos;est le mouvement de
+              renaissance après la destruction, la manière dont Marceline
+              choisit la vie, l&apos;amour, l&apos;humour et la liberté.
             </p>
+
             <p>
               Après une première collaboration autour de{" "}
               <em>La Princesse blanche</em> de Rilke, Ann-Gisel Glass et Didier
@@ -294,16 +397,20 @@ const radioInterviewLink =
           </div>
         </section>
 
+        {/* NOTE D'INTENTION */}
         <section id="amour-apres-intention" className="section">
           <div className="container">
             <h2>
               <span>Note</span> d&apos;intention
             </h2>
+
             <p className="intro">
               Dès les premières lignes, nous sommes plongés dans la nuit de
               Marceline, dans la peur de perdre la vue, et dans cette question
-              obsédante : comment continuer à vivre après l&apos;irreprésentable&nbsp;?
+              obsédante : comment continuer à vivre après
+              l&apos;irreprésentable&nbsp;?
             </p>
+
             <p>
               À partir de là, la pièce suit une jeune femme qui refuse de se
               laisser définir uniquement par son statut de survivante. Son corps
@@ -311,6 +418,7 @@ const radioInterviewLink =
               questions. En parlant de ses amours, elle raconte aussi son retour
               au monde, sa façon d&apos;être « parmi les vivants ».
             </p>
+
             <p>
               La mise en scène propose un espace épuré où la voix d&apos;Ann-Gisel
               Glass répond à des présences filmées&nbsp;: visages, hommes,
@@ -323,85 +431,147 @@ const radioInterviewLink =
           </div>
         </section>
 
-       <section id="podcast" className="section section-alt">
-  <div className="container">
-    <h2>
-      <span>Podcasts</span> &amp; Interviews radio
-    </h2>
+        {/* PODCASTS */}
+        <section id="podcast" className="section section-alt">
+          <div className="container">
+            <h2>
+              <span>Podcasts</span> &amp; Interviews radio
+            </h2>
 
-    <p className="intro">
-      Retrouvez les différentes émissions consacrées à{" "}
-      <em>L&apos;Amour Après</em>, sa création et les échanges autour de la
-      mémoire portée par le spectacle.
-    </p>
+            <p className="intro">
+              Retrouvez les différentes émissions consacrées à{" "}
+              <em>L&apos;Amour Après</em>, sa création et les échanges autour de
+              la mémoire portée par le spectacle.
+            </p>
 
-    <div className="grid">
-      {/* Podcast IDFM */}
-      <article className="card">
-        <h3>Les secrets de la servante</h3>
+            <div className="grid">
+              {/* Podcast IDFM */}
+              <article className="card">
+                <h3>Les secrets de la servante</h3>
 
-        <p className="card-meta">
-          IDFM 98 · Avec Christelle Barrilliet
-        </p>
+                <p className="card-meta">
+                  IDFM 98 · Avec Christelle Barrilliet
+                </p>
 
-        <p>
-          Une rencontre consacrée à la création de <em>L&apos;Amour Après</em>,
-          à son univers artistique et au travail mené autour de la mémoire de
-          Marceline Loridan-Ivens.
-        </p>
+                <p>
+                  Une rencontre consacrée à la création de{" "}
+                  <em>L&apos;Amour Après</em>, à son univers artistique et au
+                  travail mené autour de la mémoire de Marceline Loridan-Ivens.
+                </p>
 
-        <div className="contact-actions">
-          <a
-            href={podcastLink}
-            className="btn"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            🎧 Écouter le podcast
-          </a>
-        </div>
-      </article>
+                <div className="contact-actions">
+                  <a
+                    href={podcastLink}
+                    className="btn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    🎧 Écouter le podcast
+                  </a>
+                </div>
+              </article>
 
-      {/* Interview Valeurs en Jeu */}
-      <article className="card">
-        <h3>Direct en Jeu</h3>
+              {/* Interview Valeurs en Jeu */}
+              <article className="card">
+                <h3>Direct en Jeu</h3>
 
-        <p className="card-meta">
-          Valeurs en Jeu · Lundi 6 juillet 2026 · 12 min
-        </p>
+                <p className="card-meta">
+                  Valeurs en Jeu · Lundi 6 juillet 2026 · 12 min
+                </p>
 
-        <p>
-          Interview d'Alain Moreno avec Gérard Cherqui (Mémorial de la Shoah),
-          suivie d'un entretien avec Ann-Gisel Glass autour du spectacle
-          <em> L&apos;Amour Après</em>.
-        </p>
+                <p>
+                  Interview d&apos;Alain Moreno avec Gérard Cherqui (Mémorial de
+                  la Shoah), suivie d&apos;un entretien avec Ann-Gisel Glass
+                  autour du spectacle <em>L&apos;Amour Après</em>.
+                </p>
 
-        <div className="contact-actions">
-          <a
-            href={radioInterviewLink}
-            className="btn"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            🎧 Écouter l'interview
-          </a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
+                <div className="contact-actions">
+                  <a
+                    href={radioInterviewLink}
+                    className="btn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    🎧 Écouter l&apos;interview
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
 
+        {/* ====================================================== */}
+        {/* ===================== PRESSE ========================== */}
+        {/* ====================================================== */}
+
+        <section id="presse" className="section">
+          <div className="container">
+            <h2>
+              <span>La presse</span> en parle
+            </h2>
+
+            <p className="intro">
+              Retrouvez les articles, chroniques et coups de cœur consacrés à{" "}
+              <em>L&apos;Amour Après</em> à l&apos;occasion du Festival Off
+              d&apos;Avignon 2026.
+            </p>
+
+            <div className="grid">
+              {pressArticles.map((article) => (
+                <article className="card presse-card" key={article.media}>
+                  <h3>{article.media}</h3>
+
+                  <p className="card-meta">{article.meta}</p>
+
+                  <h4 className="presse-title">{article.title}</h4>
+
+                  <p>{article.description}</p>
+
+                  <div className="contact-actions presse-actions">
+                    {/* OUVRIR LE PDF */}
+                    <a
+                      href={article.pdf}
+                      className="btn"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      📰 Lire l&apos;article
+                    </a>
+
+                    {/* TÉLÉCHARGER LE PDF */}
+                    <a
+                      href={article.pdf}
+                      className="btn btn-outline"
+                      download
+                    >
+                      📥 Télécharger
+                    </a>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ÉQUIPE ARTISTIQUE */}
         <section id="amour-apres-equipe" className="section section-alt">
           <div className="container">
             <h2>
               <span>Équipe</span> artistique
             </h2>
+
             <div className="grid">
+              {/* ANN-GISEL */}
               <article className="card">
-                <PhotoCarousel slides={annGiselSlides} className="card-carousel" />
+                <PhotoCarousel
+                  slides={annGiselSlides}
+                  className="card-carousel"
+                />
 
                 <h3>Ann-Gisel Glass</h3>
+
                 <p className="card-meta">Interprétation</p>
+
                 <p>
                   D&apos;abord remarquée au cinéma, elle tourne notamment avec
                   Jean-Luc Godard, Costa-Gavras, Jacques Doillon, Olivier
@@ -421,17 +591,25 @@ const radioInterviewLink =
                 </a>
               </article>
 
+              {/* DIDIER */}
               <article className="card">
-                <PhotoCarousel slides={didierSlides} className="card-carousel" />
+                <PhotoCarousel
+                  slides={didierSlides}
+                  className="card-carousel"
+                />
 
                 <h3>Didier Bernard</h3>
+
                 <p className="card-meta">Mise en scène</p>
+
                 <p>
                   Comédien et formateur, il met en scène de nombreux spectacles
                   en France, au Liban et en Nouvelle-Calédonie. Son travail
-                  s&apos;attache à faire entendre les textes dans des dispositifs
-                  sobres, où la relation aux spectateurs est centrale et directe.
+                  s&apos;attache à faire entendre les textes dans des
+                  dispositifs sobres, où la relation aux spectateurs est
+                  centrale et directe.
                 </p>
+
                 <a
                   href="/didiercv.pdf"
                   className="card-link"
@@ -445,12 +623,15 @@ const radioInterviewLink =
           </div>
         </section>
 
+        {/* AUTRICES */}
         <section id="autrices" className="section">
           <div className="container">
             <h2>
               <span>Les</span> autrices
             </h2>
+
             <div className="grid">
+              {/* MARCELINE */}
               <article className="card">
                 <PhotoCarousel
                   slides={marcelineSlides}
@@ -458,19 +639,26 @@ const radioInterviewLink =
                 />
 
                 <h3>Marceline Loridan-Ivens</h3>
-                <p className="card-meta">Scénariste, réalisatrice, écrivaine</p>
+
+                <p className="card-meta">
+                  Scénariste, réalisatrice, écrivaine
+                </p>
+
                 <p>
                   Rescapée de la Shoah, elle consacre une grande partie de son
-                  œuvre à la mémoire de la déportation et à la transmission&nbsp;:
-                  films documentaires réalisés avec Joris Ivens, écrits
-                  autobiographiques et récits où l&apos;intime rencontre
-                  l&apos;histoire collective.
+                  œuvre à la mémoire de la déportation et à la
+                  transmission&nbsp;: films documentaires réalisés avec Joris
+                  Ivens, écrits autobiographiques et récits où l&apos;intime
+                  rencontre l&apos;histoire collective.
                 </p>
               </article>
 
+              {/* JUDITH */}
               <article className="card">
                 <h3>Judith Perrignon</h3>
+
                 <p className="card-meta">Autrice &amp; journaliste</p>
+
                 <p>
                   Journaliste à <em>Libération</em> puis autrice de nombreux
                   livres, elle signe des récits, enquêtes et romans où se mêlent
@@ -483,6 +671,7 @@ const radioInterviewLink =
           </div>
         </section>
 
+        {/* CONTACT */}
         <section id="contact" className="section">
           <div className="container">
             <h2>
@@ -490,9 +679,9 @@ const radioInterviewLink =
             </h2>
 
             <p className="intro">
-              Pour toute demande de programmation, d&apos;informations techniques,
-              de presse ou de réservation, vous pouvez contacter Hintika et la
-              production du spectacle.
+              Pour toute demande de programmation, d&apos;informations
+              techniques, de presse ou de réservation, vous pouvez contacter
+              Hintika et la production du spectacle.
             </p>
 
             <div className="contact-block">
@@ -504,8 +693,11 @@ const radioInterviewLink =
               </p>
 
               <p>
-                <strong>Contact production / diffusion / réservation</strong>
+                <strong>
+                  Contact production / diffusion / réservation
+                </strong>
                 <br />
+
                 <a href="mailto:admin@hintika.fr">admin@hintika.fr</a>
               </p>
 
@@ -535,15 +727,22 @@ const radioInterviewLink =
                 >
                   🎧 Écouter le podcast
                 </a>
+
+                {/* BOUTON PRESSE */}
+                <a href="#presse" className="btn btn-outline">
+                  📰 Revue de presse
+                </a>
               </div>
 
-              {/* MESSAGE INFO */}
               <p className="contact-note">
                 Si le bouton de réservation ne s&apos;ouvre pas sur votre
                 ordinateur, vous pouvez nous écrire directement à :
               </p>
 
-              <a href="mailto:admin@hintika.fr" className="direct-mail-link">
+              <a
+                href="mailto:admin@hintika.fr"
+                className="direct-mail-link"
+              >
                 admin@hintika.fr
               </a>
             </div>
@@ -551,6 +750,7 @@ const radioInterviewLink =
         </section>
       </main>
 
+      {/* FOOTER */}
       <footer className="footer">
         <div className="container footer-inner">
           <p>
@@ -560,6 +760,12 @@ const radioInterviewLink =
 
           <div className="footer-links">
             <a href="#top">Retour en haut ↑</a>
+
+            <span className="footer-sep">·</span>
+
+            <a href="#presse">
+              Presse
+            </a>
 
             <span className="footer-sep">·</span>
 
